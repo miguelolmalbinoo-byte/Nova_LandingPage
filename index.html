@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albino & Meurer Multimarcas | Motos Seminovas e 0km</title>
+    <meta name="description" content="Compre sua moto com garantia e segurança sem sair da região. Fuja dos golpes da internet. Melhores condições, troca e financiamento facilitado.">
+    
+    <!-- Google Fonts (Inter, Poppins, Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#730606',
+                            redLight: '#A61111',
+                            offWhite: '#F2F2F2',
+                            charcoal: '#0D0D0D',
+                            cardBg: '#141414',
+                            whatsapp: '#25D366',
+                            whatsappHover: '#20ba59'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'premium': '0 10px 40px -10px rgba(0, 0, 0, 0.7)',
+                        'glow': '0 0 20px rgba(37, 211, 102, 0.35)',
+                        'glow-heavy': '0 0 30px rgba(37, 211, 102, 0.6)',
+                        'red-glow': '0 0 25px rgba(115, 6, 6, 0.4)'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #0D0D0D;
+            color: #F2F2F2;
+            overflow-x: hidden;
+        }
+        .glass-header {
+            background: rgba(13, 13, 13, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+        .premium-gradient {
+            background: linear-gradient(135deg, #141414 0%, #0d0d0d 100%);
+        }
+        .hero-radial {
+            background: radial-gradient(circle at 80% 20%, rgba(115, 6, 6, 0.18) 0%, transparent 55%);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0D0D0D;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #730606;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #A61111;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-brand-offWhite selection:bg-brand-red selection:text-white">
+
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a href="http://wa.me/5547999934896" target="_blank" rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 z-50 bg-brand-whatsapp text-white p-4 rounded-full shadow-glow-heavy hover:bg-brand-whatsappHover transition-all duration-300 transform hover:scale-110 flex items-center justify-center group"
+       aria-label="Conversar no WhatsApp">
+        <i class="fab fa-whatsapp text-3xl animate-pulse"></i>
+        <span class="absolute right-16 bg-brand-charcoal text-white text-xs font-semibold px-3 py-2 rounded-xl shadow-xl border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
+            Fale com a gente agora!
+        </span>
+    </a>
+
+    <!-- CABEÇALHO PREMIUM -->
+    <header class="fixed top-0 left-0 right-0 z-40 glass-header transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo à esquerda -->
+            <a href="#inicio" class="flex items-center transition-transform duration-300 hover:scale-102">
+                <img src="https://res.cloudinary.com/dvfeliglu/image/upload/v1781270274/Logo_Albino_Meurer_Motos_vyrrvv.png" 
+                     alt="Logo Albino & Meurer Multimarcas" class="h-12 sm:h-14 w-auto object-contain">
+            </a>
+
+            <!-- Menu com scroll suave -->
+            <nav class="hidden md:flex items-center gap-8 font-poppins text-sm font-medium tracking-wide">
+                <a href="#inicio" class="text-white hover:text-brand-redLight transition-colors duration-200">Início</a>
+                <a href="#servicos" class="text-gray-400 hover:text-brand-redLight transition-colors duration-200">Serviços</a>
+                <a href="#beneficios" class="text-gray-400 hover:text-brand-redLight transition-colors duration-200">Benefícios</a>
+                <a href="#contato" class="text-gray-400 hover:text-brand-redLight transition-colors duration-200">Contato</a>
+            </nav>
+
+            <!-- Botão Verde no Canto Direito -->
+            <div class="flex items-center gap-4">
+                <a href="http://wa.me/5547999934896" target="_blank" rel="noopener noreferrer" 
+                   class="bg-brand-whatsapp hover:bg-brand-whatsappHover text-white px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold font-poppins flex items-center gap-2 transition-all duration-300 transform hover:-translate-y-0.5 shadow-md">
+                    <i class="fab fa-whatsapp text-base"></i>
+                    <span>Conversar no WhatsApp</span>
+                </a>
+                
+                <!-- Hamburguer Mobile -->
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-1" aria-label="Abrir Menu">
+                    <i class="fa-solid fa-bars-staggered text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Dropdown Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-charcoal border-b border-white/5 px-4 pt-2 pb-6 space-y-3 font-poppins">
+            <a href="#inicio" class="block text-white text-base py-2.5 border-b border-white/5">Início</a>
+            <a href="#servicos" class="block text-gray-300 text-base py-2.5 border-b border-white/5">Serviços</a>
+            <a href="#beneficios" class="block text-gray-300 text-base py-2.5 border-b border-white/5">Benefícios</a>
+            <a href="#contato" class="block text-gray-300 text-base py-2.5">Contato</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (PRIMEIRA DOBRA) -->
+    <section id="inicio" class="relative pt-32 pb-16 md:pt-48 md:pb-24 min-h-screen flex items-center hero-radial overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Conteúdo Textual (Esquerda) -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="inline-flex items-center gap-2 bg-brand-red/10 border border-brand-red/30 px-4 py-1.5 rounded-full text-brand-redLight text-xs font-bold tracking-widest uppercase font-poppins mx-auto lg:mx-0">
+                        <i class="fa-solid fa-shield-halved"></i> 100% Regional & Seguro
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-black font-montserrat text-white leading-tight uppercase tracking-tight">
+                        COMPRE SUA MOTO COM <span class="text-brand-redLight">GARANTIA E SEGURANÇA</span> SEM SAIR DA REGIÃO. FUJA DOS GOLPES DA INTERNET
+                    </h1>
+                    
+                    <p class="text-gray-400 text-sm sm:text-base font-medium max-w-2xl mx-auto lg:mx-0 font-poppins leading-relaxed">
+                        Chega de perder tempo com anúncios fakes, aqui a compra é segura. Fazemos a melhor avaliação da sua usada e parcelamos em até 48x a sua nova moto, com análise de crédito feita em minutos pelo WhatsApp.
+                    </p>
+                    
+                    <!-- CTAs focados em conversão direta -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="http://wa.me/5547999934896" target="_blank" rel="noopener noreferrer" 
+                           class="w-full sm:w-auto bg-brand-red hover:bg-brand-redHover text-white px-8 py-4 rounded-xl font-bold font-poppins shadow-red-glow text-center transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-calculator text-lg"></i>
+                            Simular Parcelas
+                        </a>
+                        <a href="http://wa.me/5547999934896" target="_blank" rel="noopener noreferrer" 
+                           class="w-full sm:w-auto bg-transparent hover:bg-white/5 text-white border-2 border-white/20 hover:border-white/40 px-8 py-4 rounded-xl font-bold font-poppins text-center transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-motorcycle text-lg"></i>
+                            Conferir Estoque Atualizado
+                        </a>
+                    </div>
+                    
+                    <!-- Bullet Badges abaixo dos botões -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 text-left border-t border-white/10">
+                        <div class="flex items-center gap-2">
+                            <span class="text-lg">⭐</span>
+                            <span class="text-xs text-gray-300 font-semibold font-poppins">Mais de 35 anos de experiência</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-lg">🔒</span>
+                            <span class="text-xs text-gray-300 font-semibold font-poppins">Compra segura</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-lg">⚡</span>
+                            <span class="text-xs text-gray-300 font-semibold font-poppins">Aprovação rápida</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-lg">🏍️</span>
+                            <span class="text-xs text-gray-300 font-semibold font-poppins">Motos com garantia</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Imagem da Logo Oficial (Direita) -->
+                <div class="lg:col-span-5 flex justify-center relative" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="absolute inset-0 bg-brand-red/5 rounded-full filter blur-3xl w-72 h-72 mx-auto my-auto"></div>
+                    <img src="https://res.cloudinary.com/dvfeliglu/image/upload/v1781270274/Logo_Albino_Meurer_Motos_vyrrvv.png" 
+                         alt="Logo Albino & Meurer" class="relative z-10 w-4/5 sm:w-2/3 lg:w-full h-auto object-contain drop-shadow-[0_20px_50px_rgba(115,6,6,0.3)]">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEQUÊNCIA DE FOTOS REAIS (4 EM SEQUÊNCIA EXIGIDA) -->
+    <section class="py-12 bg-brand-charcoal border-y border-white/5 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
+            <p class="text-left text-xs tracking-widest text-gray-500 font-bold uppercase font-poppins">Showroom Real / Modelos Disponíveis</p>
+        </div>
+        
+        <!-- Galeria contínua / Grid Responsivo para as 4 primeiras imagens -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-brand-cardBg border border-white/5 group relative shadow-premium" data-aos="zoom-in" data-aos-delay="100">
+                <img src="https://res.cloudinary.com/dvfeliglu/image/upload/v1781270670/Untitled_design_-_1_qvkhgt.png" alt="Moto Real" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <span class="text-white font-medium text-xs"><i class="fa-solid fa-circle-check text-brand-whatsapp mr-1"></i> Ver detalhes</span>
+                </div>
+            </div>
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-brand-cardBg border border-white/5 group relative shadow-premium" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://res.cloudinary.com/dvfeliglu/image/upload/v1781270670/Untitled_design_-_2_szk5bx.png" alt="Moto Real" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <span class="text-white font-medium text-xs"><i class="fa-solid fa-circle-check text-brand-whatsapp mr-1"></i> Ver detalhes</span>
+                </div>
+            </div>
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-brand-cardBg border border-white/5 group relative shadow-premium" data-aos="zoom-in" data-aos-delay="300">
+                <img src="https://res.cloudinary.com/dvfeliglu/image/upload/v1781270671/Untitled_design_-_9_jw2thn.png" alt="Moto Real" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <span class="text-white font-medium text-xs"><i class="fa-solid fa-circle-check text-brand-whatsapp mr-1"></i> Ver detalhes</span>
+                </div>
+            </div>
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-brand-cardBg border border-white/5 group relative shadow-premium" data-aos="zoom-in" data-aos-delay="400">
+                <img src="https://res.cloudinary.com/dvfeliglu/image/upload/v1781270671/Untitled_design_-_8_tybnun.png" alt="Moto Real" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <span class="text-white font-medium text-xs"><i class="fa-solid fa-circle-check text-brand-whatsapp mr-1"></i> Ver detalhes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SERVIÇOS (CARDS MODERNOS) -->
+    <section id="servicos" class="py-24 premium-gradient relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-brand-redLight font-semibold text-xs tracking-widest uppercase font-poppins">Nossos Serviços</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-montserrat text-white mt-2">Soluções Completas Sob Medida</h2>
+                <div class="w-12 h-1 bg-brand-red mx-auto mt-4 rounded"></div>
+            </div>
+
+            <!-- Grid de Soluções -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-brand-cardBg border border-white/5 rounded-2xl p-8 hover:border-brand-red/40 hover:shadow-premium transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-red/10 border border-brand-red/20 flex items-center justify-center text-brand-redLight text-xl mb-6 group-hover:bg-brand-red group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-montserrat text-white mb-2">Venda de motos 0km</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">Saia de máquina nova lacrada com as melhores negociações diretas da região.</p>
+                    </div>
+                    <a href="http://wa.me/5547999934896" target="_blank" rel="noopener noreferrer" class="w-full bg-white/5 group-hover:bg-brand-whatsapp text-white py-3 rounded-xl text-center text-sm font-semibold font-poppins transition-colors duration-300">Falar no WhatsApp</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-brand-cardBg border border-white/5 rounded-2xl p-8 hover:border-brand-red/40 hover:shadow-premium transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-red/10 border border-brand-red/20 flex items-center justify-center text-brand-redLight text-xl mb-6 group-hover:bg-brand-red group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-motorcycle"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-montserrat text-white mb-2">Venda de motos seminovas</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">Motos rigorosamente revisadas, de alta procedência e com laudo aprovado.</p>
+                    </div>
+                    <a href="http://wa.me/5547999934896" target="_blank" rel="noopener noreferrer" class="w-full bg-white/5 group-hover:bg-brand-whatsapp text-white py-3 rounded-xl text-center text-sm font-semibold font-poppins transition-colors duration-300">Falar no WhatsApp</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-brand-cardBg border border-white/5 rounded-2xl p-8 hover:border-brand-red/40 hover:shadow-premium transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="300">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-red/10 border border-brand-red/20 flex items-center justify-center text-brand-redLight text-xl mb-6 group-hover:bg-brand-red group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-montserrat text-white mb-2">Financiamento em até 48x</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">Crédito aprovado rápido em parceria com os maiores bancos, sem burocracias.</p>
+                    </div>
+                    <a href="http://wa.me/5547999934896" target="_blank" rel="noopener noreferrer" class="w-full bg-white/5 group-hover:bg-brand-whatsapp text-white py-3 rounded-xl text-center text-sm font-semibold font-poppins transition-colors duration-300">Simular Financiamento</a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-brand-cardBg border border-white/5 rounded-2xl p-8 hover:border-brand-red/40 hover:shadow-premium transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="400">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-red/10 border border-brand-red/20 flex items-center justify-center text-brand-redLight text-xl mb-6 group-hover:bg-brand-red group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-credit-card"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-montserrat text-white mb-2">Parcelamento no cartão em até 18x</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">Parcele sua entrada ou o valor total da moto no cartão com facilidade extrema.</p>
+                    </div>
+                    <a href="http://wa.me/5547999934896" target="_blank" rel="noopener noreferrer" class="w-full bg-white/5 group-hover:bg-brand-whatsapp text-white py-3 rounded-xl text-center text-sm font-semibold font-poppins transition-colors duration-300">Simular Financiamento</a>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-brand-cardBg border border-white/5 rounded-2xl p-8 hover:border-brand-red/40 hover:shadow-premium transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="500">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-red/10 border border-brand-red/20 flex items-center justify-center text-brand-redLight text-xl mb-6 group-hover:bg-brand-red group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-montserrat text-white mb-2">Consignação</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">Venda sua moto sem dor de cabeça. Nós preparamos, anunciamos e vendemos para você.</p>
+                    </div>
+                    <a href="http://wa.me/5547999934896" target="_blank" rel="noopener noreferrer" class="w-full bg-white/5 group-hover:bg-brand-whatsapp text-white py-3 rounded-xl text-center text-sm font-semibold font-poppins transition-colors duration-300">Falar no WhatsApp</a>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-brand-cardBg border border-white/5 rounded-2xl p-8 hover:border-brand-red/40 hover:shadow-premium transition-all duration-300 transform hover:-translate-y-1 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="600">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-brand-red/10 border border-brand-red/20 flex items-center justify-center text-brand-redLight text-xl mb-6 group-hover:bg-brand-red group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </div>
+                        <h3 class="text-xl font-bold font-montserrat text-white mb-2">Compramos sua moto seminova</h3>
+                        <p class="text-gray-400 text-sm font-light leading-relaxed mb-6">Pagamos rápido e oferecemos a melhor avaliação do mercado para sua usada de fato.</p>
+                    </div>
+                    <a href="http://wa.me/5547999934896" target="_blank" rel="noopener noreferrer" class="w-full bg-white/5 group-hover:bg-brand-whatsapp text-white py-3 rounded-xl text-center text-sm font-semibold font-poppins transition-colors duration-300">Falar no WhatsApp</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO PREMIUM (BENEFÍCIOS) WITH PARALLAX EFFECT -->
+    <section id="beneficios" class="py-24 relative overflow-hidden bg-brand-charcoal flex items-center">
+        <!-- Imagem elegante de motocicleta ao fundo com opacidade reduzida para efeito premium -->
+        <div class="absolute inset-0 z-0 opacity-10 bg-cover bg-center mix-blend-luminosity pointer-events-none" 
+             style="background-image: url('https://res.cloudinary.com/dvfeliglu/image/upload/v1781270671/Untitled_design_-_6_umkyn9.png'); background-attachment: fixed;"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-charcoal via-brand-charcoal/90 to-transparent z-0"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Lista de Benefícios (Esquerda) -->
+                <div class="lg:col-span-7 space-y-8" data-aos="fade-right">
+                    <div>
+                        <span class="text-brand-redLight font-semibold text-xs tracking-widest uppercase font-poppins">Vantagens Únicas</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold font-montserrat text-white mt-2">O que você ganha com a Albino & Meurer</h2>
+                        <div class="w-12 h-1 bg-brand-red mt-4 rounded"></div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-poppins">
+                        <div class="flex items-start gap-3 bg-brand-cardBg/70 backdrop-blur-sm p-4 rounded-xl border border-white/5">
+                            <span class="text-green-500 text-lg mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                            <span class="text-sm text-gray-200 font-medium">Atendimento VIP 24h online e presencial</span>
+                        </div>
+                        <div class="flex items-start gap-3 bg-brand-cardBg/70 backdrop-blur-sm p-4 rounded-xl border border-white/5">
+                            <span class="text-green-500 text-lg mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                            <span class="text-sm text-gray-200 font-medium">Estacionamento fácil</span>
+                        </div>
+                        <div class="flex items-start gap-3 bg-brand-cardBg/70 backdrop-blur-sm p-4 rounded-xl border border-white/5">
+                            <span class="text-green-500 text-lg mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                            <span class="text-sm text-gray-200 font-medium">Garantia de compra segura</span>
+                        </div>
+                        <div class="flex items-start gap-3 bg-brand-cardBg/70 backdrop-blur-sm p-4 rounded-xl border border-white/5">
+                            <span class="text-green-500 text-lg mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                            <span class="text-sm text-gray-200 font-medium">Mais de 35 anos de experiência</span>
+                        </div>
+                        <div class="flex items-start gap-3 bg-brand-cardBg/70 backdrop-blur-sm p-4 rounded-xl border border-white/5">
+                            <span class="text-green-500 text-lg mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                            <span class="text-sm text-gray-200 font-medium">Motos com proteção premium de pintura e plásticos</span>
+                        </div>
+                        <div class="flex items-start gap-3 bg-brand-cardBg/70 backdrop-blur-sm p-4 rounded-xl border border-white/5">
+                            <span class="text-green-500 text-lg mt-0.5"><i class="fa-solid fa-circle-check"></i></span>
+                            <span class="text-sm text-gray-200 font-medium">Entregamos na sua casa</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-red/10 border border-brand-red/20 rounded-xl p-4 flex items-center gap-3 max-w-xl">
+                        <span class="text-2xl">🏍️</span>
+                        <p class="text-xs sm:text-sm text-gray-300 font-medium font-poppins">Você já sai pilotando sua nova moto sem burocracia!</p>
+                    </div>
+                </div>
+
+                <!-- Composição Visual de Imagens Misturadas (Direita) -->
+                <div class="lg:col-span-5 grid grid-cols-2 gap-4" data-aos="fade-left">
+                    <div class="space-y-4">
+                        <div class="rounded-2xl overflow-hidden border border-white/5 shadow-premium transform translate-y-6">
+                            <img src="https://res.cloudinary.com/dvfeliglu/image/upload/v1781270671/Untitled_design_-_7_n1bbrc.png" alt="Showroom Albino & Meurer" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-2xl overflow-hidden border border-white/5 shadow-premium transform translate-y-6">
+                            <img src="https://res.cloudinary.com/dvfeliglu/image/upload/v1781270671/Untitled_design_-_5_zzwplp.png" alt="Detalhe Moto Premium" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="rounded-2xl overflow-hidden border border-white/5 shadow-premium">
+                            <img src="https://res.cloudinary.com/dvfeliglu/image/upload/v1781270671/Untitled_design_-_4_edlkpw.png" alt="Estoque Selecionado" class="w-full h-full object-cover">
+                        </div>
+                        <div class="bg-brand-red/80 p-6 rounded-2xl border border-white/10 flex flex-col justify-center items-center text-center text-white shadow-premium min-h-[160px]">
+                            <span class="text-4xl font-black font-montserrat">35+</span>
+                            <span class="text-[10px] font-bold uppercase tracking-widest font-poppins mt-2 opacity-90">Anos de Credibilidade</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO PROVA SOCIAL (AVALIAÇÕES GOOGLE PREMIUM) -->
+    <section class="py-24 premium-gradient relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- Grid de Estatísticas / Indicadores de Confiança -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-20 text-center">
+                <div class="p-6 bg-brand-cardBg border border-white/5 rounded-2xl shadow-premium" data-aos="zoom-in" data-aos-delay="100">
+                    <p class="text-4xl font-black text-brand-redLight font-montserrat">+35 anos</p>
+                    <p class="text-xs font-semibold text-gray-400 font-poppins uppercase tracking-wider mt-2">de experiência</p>
+                </div>
+                <div class="p-6 bg-brand-cardBg border border-white/5 rounded-2xl shadow-premium" data-aos="zoom-in" data-aos-delay="200">
+                    <p class="text-4xl font-black text-brand-redLight font-montserrat">Centenas</p>
+                    <p class="text-xs font-semibold text-gray-400 font-poppins uppercase tracking-wider mt-2">de clientes satisfeitos</p>
+                </div>
+                <div class="p-6 bg-brand-cardBg border border-white/5 rounded-2xl shadow-premium" data-aos="zoom-in" data-aos-delay="300">
+                    <p class="text-4xl font-black text-brand-redLight font-montserrat">Facilitada</p>
+                    <p class="text-xs font-semibold text-gray-400 font-poppins uppercase tracking-wider mt-2">Aprovação rápida</p>
+                </div>
+            </div>
+
+            <!-- Título dos Reviews -->
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-brand-redLight font-semibold text-xs tracking-widest uppercase font-poppins">Opinião de Clientes</span>
+                <h2 class="text-3xl font-extrabold font-montserrat text-white mt-2">Avaliações Reais de Quem Confia</h2>
+                <div class="flex items-center justify-center gap-1 mt-3 text-yellow-500 text-sm">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    <span class="text-white text-xs font-bold ml-2 font-poppins">5/5 no Google Reviews</span>
+                </div>
+            </div>
+
+            <!-- Cards de Avaliações Elegantes -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-brand-cardBg border border-white/5 rounded-2xl p-6 flex flex-col justify-between shadow-premium relative group hover:border-brand-red/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-quote-right absolute top-6 right-6 text-3xl text-white/5"></i>
+                    <div>
+                        <div class="flex items-center gap-1 text-yellow-500 text-xs mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm font-light leading-relaxed mb-6 font-poppins">"Fiz a simulação e aprovação do meu financiamento inteiramente pelo WhatsApp em poucos minutos. Atendimento premium e transparência total, sem mentiras ou golpes da internet."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                        <div class="w-10 h-10 rounded-full bg-brand-red flex items-center justify-center text-white font-bold text-sm">GA</div>
+                        <div>
+                            <p class="text-sm font-semibold text-white font-poppins">Gabriel Almeida</p>
+                            <p class="text-[10px] text-green-400 flex items-center gap-1 font-medium"><i class="fa-solid fa-circle-check"></i> Cliente Verificado</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-brand-cardBg border border-white/5 rounded-2xl p-6 flex flex-col justify-between shadow-premium relative group hover:border-brand-red/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-quote-right absolute top-6 right-6 text-3xl text-white/5"></i>
+                    <div>
+                        <div class="flex items-center gap-1 text-yellow-500 text-xs mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm font-light leading-relaxed mb-6 font-poppins">"Super recomendo a Albino & Meurer. Comprei minha moto 0km, avaliaram minha usada com um preço super justo no processo de troca e entregaram em casa brilhando!"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                        <div class="w-10 h-10 rounded-full bg-brand-red flex items-center justify-center text-white font-bold text-sm">MR</div>
+                        <div>
+                            <p class="text-sm font-semibold text-white font-poppins">Mariana Rocha</p>
+                            <p class="text-[10px] text-green-400 flex items-center gap-1 font-medium"><i class="fa-solid fa-circle-check"></i> Cliente Verificado</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-brand-cardBg border border-white/5 rounded-2xl p-6 flex flex-col justify-between shadow-premium relative group hover:border-brand-red/20 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-quote-right absolute top-6 right-6 text-3xl text-white/5"></i>
+                    <div>
+                        <div class="flex items-center gap-1 text-yellow-500 text-xs mb-4">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm font-light leading-relaxed mb-6 font-poppins">"Empresa séria com tradição regional. Dá pra sentir a segurança no atendimento presencial e online. Comprei uma seminova com garantia total e está perfeita."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-white/5">
+                        <div class="w-10 h-10 rounded-full bg-brand-red flex items-center justify-center text-white font-bold text-sm">RS</div>
+                        <div>
+                            <p class="text-sm font-semibold text-white font-poppins">Rodrigo Soares</p>
+                            <p class="text-[10px] text-green-400 flex items-center gap-1 font-medium"><i class="fa-solid fa-circle-check"></i> Cliente Verificado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEÇÃO CHAMATIVA DE CTA FINAL PRE-RODAPÉ -->
+    <section id="contato" class="py-24 bg-brand-charcoal relative overflow-hidden text-center border-t border-white/5">
+        <div class="absolute inset-0 bg-radial-gradient from-brand-red/10 via-transparent to-transparent pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6" data-aos="zoom-in">
+            <span class="text-brand-redLight font-bold text-xs tracking-widest uppercase font-poppins bg-brand-red/10 border border-brand-red/20 px-4 py-1.5 rounded-full">
+                Atendimento Imediato
+            </span>
+            
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black font-montserrat text-white leading-tight uppercase">
+                Pensou na moto ideal?<br> Fale agora com nossa equipe.
+            </h2>
+            
+            <p class="text-gray-400 text-sm sm:text-base max-w-xl mx-auto font-poppins font-light">
+                Clique no botão abaixo e receba atendimento rápido pelo WhatsApp.
+            </p>
+            
+            <div class="pt-4">
+                <a href="http://wa.me/5547999934896" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-4 bg-brand-whatsapp hover:bg-brand-whatsappHover text-white px-10 py-5 rounded-2xl text-base sm:text-lg font-extrabold font-poppins shadow-glow-heavy transition-all duration-300 transform hover:-translate-y-1 group tracking-wide">
+                    <i class="fab fa-whatsapp text-2xl group-hover:scale-110 transition-transform"></i>
+                    Conversar no WhatsApp
+                </a>
+            </div>
+            
+            <p class="text-xs text-gray-500 font-poppins font-medium pt-4">
+                <i class="fa-solid fa-bolt text-brand-redLight mr-1 animate-pulse"></i> Resposta em poucos minutos. Sem formulários cansativos.
+            </p>
+        </div>
+    </section>
+
+    <!-- RODAPÉ SIMPLES E ELEGANTE -->
+    <footer class="bg-brand-charcoal border-t border-white/5 py-12 text-gray-500 text-xs font-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 border-b border-white/5 pb-8">
+                
+                <!-- Nome da Empresa -->
+                <div class="text-center md:text-left space-y-1">
+                    <p class="font-bold text-white text-base font-montserrat">Albino & Meurer Multimarcas</p>
+                    <p class="font-poppins">Especialistas em motos seminovas e 0km com segurança regional garantida.</p>
+                </div>
+                
+                <!-- Links Rápidos -->
+                <div class="flex justify-center gap-6 font-medium font-poppins text-gray-400">
+                    <a href="#inicio" class="hover:text-brand-redLight transition-colors">Início</a>
+                    <a href="#servicos" class="hover:text-brand-redLight transition-colors">Serviços</a>
+                    <a href="#beneficios" class="hover:text-brand-redLight transition-colors">Benefícios</a>
+                    <a href="#contato" class="hover:text-brand-redLight transition-colors">Contato</a>
+                </div>
+                
+                <!-- WhatsApp Clicável -->
+                <div class="text-center md:text-right">
+                    <a href="http://wa.me/5547999934896" target="_blank" rel="noopener noreferrer" class="text-gray-200 hover:text-brand-whatsapp font-bold flex items-center justify-center md:justify-end gap-2 text-sm transition-colors font-poppins">
+                        <i class="fab fa-whatsapp text-brand-whatsapp text-base"></i> (47) 99993-4896
+                    </a>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 text-center sm:text-left font-poppins">
+                <p>&copy; 2026 Albino & Meurer Multimarcas. Todos os direitos reservados.</p>
+                <p class="flex items-center gap-1 justify-center"><i class="fa-solid fa-shield-halved text-brand-redLight"></i> Compra Segura Sem Golpes Regionais</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS (Animate On Scroll) Scripts & Menu Control -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializa o gerenciador de motion design
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out'
+        });
+
+        // Toggle do Menu Hamburguer Mobile
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Auto fechar menu mobile ao clicar em um link interno
+        const links = menu.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Efeito Dinâmico de Transparência Elegante no Header ao rolar a página
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                header.classList.add('shadow-xl', 'bg-brand-charcoal/95');
+                header.classList.remove('bg-brand-charcoal/75');
+            } else {
+                header.classList.remove('shadow-xl', 'bg-brand-charcoal/95');
+                header.classList.add('bg-brand-charcoal/75');
+            }
+        });
+    </script>
+</body>
+</html>
